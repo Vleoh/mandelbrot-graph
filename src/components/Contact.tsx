@@ -4,8 +4,25 @@ import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 export function Contact() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const formData = new FormData(e.currentTarget);
+    const data = {
+        nombre: formData.get('nombre'), // Cambiado a 'nombre'
+        email: formData.get('email'),
+        mensaje: formData.get('mensaje'), // Cambiado a 'mensaje'
+    };
+
+    // Enviar datos al backend
+    await fetch('https://mandelbrot-back.vercel.app/api/enviar-contacto', { // URL de  backend en Vercel
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+
     setIsFormSubmitted(true);
     setTimeout(() => setIsFormSubmitted(false), 3000);
   };
@@ -35,6 +52,7 @@ export function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <input
+                name="nombre" // Cambiado a 'nombre'
                 type="text"
                 placeholder="Nombre"
                 className="w-full px-4 py-2 rounded-lg text-gray-900"
@@ -43,6 +61,7 @@ export function Contact() {
             </div>
             <div>
               <input
+                name="email"
                 type="email"
                 placeholder="Email"
                 className="w-full px-4 py-2 rounded-lg text-gray-900"
@@ -51,6 +70,7 @@ export function Contact() {
             </div>
             <div>
               <textarea
+                name="mensaje" // Cambiado a 'mensaje'
                 placeholder="Mensaje"
                 rows={4}
                 className="w-full px-4 py-2 rounded-lg text-gray-900"
