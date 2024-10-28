@@ -19,15 +19,15 @@ export function Contact() {
             <div className="space-y-6">
               <div className="flex items-center">
                 <Phone className="w-6 h-6 mr-4" />
-                <span>+54 11 4444-5555</span>
+                <span>+54 11 5667-8270</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-6 h-6 mr-4" />
-                <span>info@mandelbrotgraph.com</span>
+                <span>mandelbrotgraph@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-6 h-6 mr-4" />
-                <span>Av. Corrientes 1234, CABA</span>
+                <span>Obrien 979, Malvinas Argentinas</span>
               </div>
             </div>
           </div>

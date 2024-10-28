@@ -1,7 +1,7 @@
 import React from 'react';
 
 const brands = [
-  'Nike', 'Adidas', 'Coca-Cola', 'Samsung', 'Toyota', 'McDonald\'s'
+  'JPH Lions', 'Bioseif', 'World IT', 'Carrefour'
 ];
 
 export function Brands() {
