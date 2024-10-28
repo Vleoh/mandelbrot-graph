@@ -12,7 +12,7 @@ export function Brands() {
           Marcas que Confían en Nosotros
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {brands.map((brand, index) => (
             <div key={index} className="flex items-center justify-center p-4 bg-white rounded-lg shadow">
               <span className="text-xl font-semibold text-gray-700">{brand}</span>
