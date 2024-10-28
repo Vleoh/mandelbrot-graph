@@ -3,7 +3,7 @@ import { ChevronRight, ChevronLeft } from 'lucide-react';
 
 const slides = [
   {
-    url: "https://images.unsplash.com/photo-1588412079929-790b9f593d8e?auto=format&fit=crop&q=80&w=1920",
+    url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=1920",
     title: "Impresión de Gran Formato",
     desc: "Calidad excepcional en cada proyecto"
   },
@@ -13,7 +13,7 @@ const slides = [
     desc: "Soluciones visuales que destacan"
   },
   {
-    url: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=1920",
+    url: "https://images.unsplash.com/photo-1588412079929-790b9f593d8e?auto=format&fit=crop&q=80&w=1920",
     title: "Diseño Personalizado",
     desc: "Creatividad que transforma espacios"
   }
